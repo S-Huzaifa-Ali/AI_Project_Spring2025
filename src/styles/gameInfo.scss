@@ -1,0 +1,116 @@
+.game-info {
+  background-color: #333;
+  color: white;
+  border-radius: 5px;
+  padding: 10px;
+  margin-left: 20px;
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+
+  .info-section {
+    h3 {
+      margin-top: 0;
+      margin-bottom: 10px;
+      border-bottom: 1px solid #555;
+      padding-bottom: 5px;
+    }
+  }
+
+  .move-history {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+
+    .move-entry {
+      display: flex;
+      align-items: center;
+      
+      .move-number {
+        width: 30px;
+        color: #aaa;
+      }
+
+      .move {
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        
+        &.white {
+          color: #fff;
+        }
+        &.black {
+          color: #000;
+        }
+        
+        .piece-icon {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          width: 20px;
+          height: 20px;
+          
+          .piece-svg {
+            width: 100%;
+            height: 100%;
+            
+            &.white {
+              fill: #fff;
+            }
+            
+            &.black {
+              fill: #000;
+            }
+          }
+        }
+        
+        .move-destination {
+          font-weight: bold;
+        }
+      }
+    }
+  }
+
+  .captured-pieces {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 10px;
+
+    .white-captured, .black-captured {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 5px;
+    }
+
+    .captured-piece {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+      
+      .piece-svg {
+        width: 100%;
+        height: 100%;
+        
+        &.white {
+          fill: #fff;
+        }
+        
+        &.black {
+          fill: #000;
+        }
+      }
+    }
+  }
+
+  .material-advantage {
+    text-align: right;
+    font-weight: bold;
+    color: #ddd;
+  }
+}
